@@ -5,14 +5,21 @@ interface TileData {
 	index: number;
 }
 
-const Tile = ({ number }: { number: TileData }) => {
+const Tile = ({
+	tileNumber,
+	moveTile,
+}: {
+	tileNumber: TileData;
+	moveTile: Function;
+}) => {
 	return (
 		<div
-			className={`number ${number.value === 16 ? "disabled" : ""} slot--${
-				number.index
+			onClick={() => moveTile(tileNumber)}
+			className={`number ${tileNumber.value === 16 ? "disabled" : ""} slot--${
+				tileNumber.index
 			}`}
 		>
-			{number.value === 16 ? "" : number.value}
+			{tileNumber.value === 16 ? "" : tileNumber.value}
 		</div>
 	);
 };
