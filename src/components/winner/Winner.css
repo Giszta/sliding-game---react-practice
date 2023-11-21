@@ -13,3 +13,9 @@
 	align-items: center;
 	color: white;
 }
+
+@media screen and (max-width: 992px) {
+	h1 {
+		font-size: 28px;
+	}
+}
