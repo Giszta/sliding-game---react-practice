@@ -15,7 +15,9 @@ const Tile = ({
 	return (
 		<div
 			onClick={() => moveTile(tileNumber)}
-			className={`number ${tileNumber.value === 16 ? "disabled" : ""} slot--${
+			className={`number ${
+				tileNumber.value === tileNumber.index + 1 ? "correct" : ""
+			}  ${tileNumber.value === 16 ? "disabled" : ""} slot--${
 				tileNumber.index
 			}`}
 		>
