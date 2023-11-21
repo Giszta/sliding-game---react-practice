@@ -1,5 +1,5 @@
 .overlay {
-	border: 2px solid #55ab9f;
+	border: 2px solid var(--board);
 	pointer-events: none;
 	z-index: 20;
 }
