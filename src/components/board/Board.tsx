@@ -2,23 +2,17 @@ import NewGame from "../new-game/NewGame";
 import Overlay from "../overlay/Overlay";
 import Tile from "../tile/Tile";
 import Winner from "../winner/Winner";
+import shuffle from "../../Utils";
 import "./Board.css";
 import { useState, useEffect } from "react";
 
-export interface tileData {
+interface tileData {
 	value: number;
 	index: number;
 }
 
 export const Board = () => {
-	const shuffle = () =>
-		new Array(16)
-			.fill(undefined)
-			.map((_, i) => i + 1)
-			.sort(() => Math.random() - 0.5)
-			.map((x, i) => ({ value: x, index: i }));
-
-	const [numbers, setNumbers] = useState<any[]>([]);
+	const [numbers, setNumbers] = useState<tileData[]>([]);
 	const [animating, setAnimating] = useState(false);
 
 	const moveTile = (tile: tileData) => {
@@ -48,7 +42,7 @@ export const Board = () => {
 			moveTile(numbers.find((n) => n.index === i16 - 4)!);
 	};
 
-	const reset = () => setNumbers(shuffle());
+	const reset = () => setNumbers(shuffle);
 
 	useEffect(() => {
 		document.addEventListener("keydown", handleKeyDown);
