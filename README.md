@@ -15,7 +15,7 @@ Working live demo <a href="https://sliding-game-65029.web.app/" target="_blank">
 * CSS3
 
 ## To-do
-* Add timer;
+* Add timer; &#9989; 24.11.2023
 
 
 ## Contact
