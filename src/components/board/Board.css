@@ -1,7 +1,3 @@
-.game {
-	position: relative;
-}
-
 .board {
 	display: grid;
 	grid-template-columns: repeat(4, var(--size));
