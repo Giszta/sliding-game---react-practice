@@ -16,6 +16,7 @@ Working live demo <a href="https://sliding-game-65029.web.app/" target="_blank">
 
 ## To-do
 * Add timer; &#9989; 24.11.2023
+* Fix the problem with generating unsolvable boards.
 
 
 ## Contact
