@@ -2,12 +2,12 @@ import NewGame from "../new-game/NewGame";
 import Overlay from "../overlay/Overlay";
 import Tile from "../tile/Tile";
 import Winner from "../winner/Winner";
-import shuffle from "../../Utils";
+import { shuffle } from "../../Utils";
 import "./Board.css";
 import { useState, useEffect } from "react";
 import Timer from "../timer/Timer";
 
-interface tileData {
+export interface tileData {
 	value: number;
 	index: number;
 }
@@ -55,7 +55,7 @@ export const Board = () => {
 	const [time, setTime] = useState(false);
 
 	const reset = () => {
-		setNumbers(shuffle);
+		setNumbers(shuffle());
 		setTime(true);
 		setTimeout(() => setTime(false), 200);
 		setIsRunning(false);
